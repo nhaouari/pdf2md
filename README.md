@@ -13,9 +13,12 @@ See [Releases](https://github.com/opendocsg/pdf2md/releases)
 ```js
 const fs = require('fs')
 const pdf2md = require('@opendocsg/pdf2md')
+const path = require('path')
+const filePath = "test.pdf"
+
 
 const pdfBuffer = fs.readFileSync(filePath)
-pdf2md(pdfBuffer, callbacks)
+pdf2md(pdfBuffer, ()=>{})
   .then(text => {
     let outputFile = allOutputPaths[i] + '.md'
     console.log(`Writing to ${outputFile}...`)
